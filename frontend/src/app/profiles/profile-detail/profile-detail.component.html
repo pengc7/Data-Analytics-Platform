@@ -1,0 +1,47 @@
+<div *ngIf="profile">
+
+  <h2 class="header">{{profile.name}}</h2>
+
+  <div class="basic-info">
+    <div class="logo">
+      <img src={{profile.logo}} alt="logo">
+    </div>
+
+    <div class="basics">
+      <p style="font-size: 25px">{{profile.name}}</p>
+      <p>{{profile.descrp}}</p>
+      <p>{{profile.url}}</p>
+    </div>
+
+    <div class="stats followers">
+      <p>{{fcount}}</p>
+      <p style="font-size: 20px">Total Followers</p>
+    </div>
+
+    <div class="stats posts">
+      <p>{{pcount}}</p>
+      <p style="font-size: 20px">Total Posts</p>
+    </div>
+  </div>
+
+    <div class="date-picker">
+      <mat-form-field  appearance="outline">
+        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+          <input matStartDate formControlName="start" placeholder="01/15/2022">
+          <input matEndDate formControlName="end" placeholder="01/18/2022">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+
+        <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+        <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+      </mat-form-field>
+    </div>
+
+
+  <app-charts [info]="{start: range.controls.start.value, end:range.controls.end.value, posts: posts}">
+  </app-charts>
+
+</div>
+

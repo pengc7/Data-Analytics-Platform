@@ -1,0 +1,30 @@
+<div>
+  <p class="title">{{lineTitle}}</p>
+  <canvas baseChart width="1100" height="200"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend">
+  </canvas>
+</div>
+
+<div class="chart-container">
+  <div>
+    <p class="title">{{pieTitle}}</p>
+    <canvas baseChart
+            [type]="'doughnut'"
+            [data]="pieChartData"
+            [options]="pieChartOptions"
+            [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+  <div>
+    <p class="title">{{barTitle}}</p>
+    <canvas baseChart
+            [type]="'bar'"
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [legend]=false>
+    </canvas>
+  </div>
+</div>

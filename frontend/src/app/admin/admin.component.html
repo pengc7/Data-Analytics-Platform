@@ -1,0 +1,22 @@
+<p class="title">Messages from users</p>
+
+<div  class="selector">
+  <div>
+    <div (click)="setAsc()" class="arrow-up"></div>
+    <div (click)="setDesc()" class="arrow-down"></div>
+  </div>
+  <div>
+     <p class="sort-label">Sort by submission time</p>
+  </div>
+</div>
+
+<ul *ngFor="let m of msg| orderBy: isAsc?'asc':'desc'">
+  <li *ngIf="checkId(m.id)">
+    <label for="solved">Solved</label>
+    <input type="checkbox" id="solved" (click)="handle(m.id)" >
+    <p>username: {{m.username}}</p>
+    <p>email: {{m.email}}</p>
+    <p>message: {{m.message}}</p>
+  </li>
+</ul>
+

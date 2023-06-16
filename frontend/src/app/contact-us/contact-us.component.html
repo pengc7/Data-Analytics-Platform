@@ -1,0 +1,36 @@
+<div fxLayout fxLayoutAlign="center" style="margin: 50px 50px;">
+  <mat-card fxLayout="column" fxFlex="1 1 50%" fxFlex.lt-sm="1 1 auto">
+    <mat-card-header>
+      <mat-card-title>Contact us</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form fxLayout="column" [formGroup]="contactFormInstance">
+        <mat-form-field>
+          <mat-label>Your name</mat-label>
+          <input type="text" matInput [formControl]="ufc" required>
+          <mat-error>Please input your name</mat-error>
+        </mat-form-field>
+        <div fxLayout="column">
+          <mat-form-field>
+            <mat-label>Your email</mat-label>
+            <input type="text" matInput [formControl]="efc" required email>
+            <mat-error>This email is not valid</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Your message</mat-label>
+            <input type="text" matInput [formControl]="mfc" required>
+            <mat-error>Message can't be empty</mat-error>
+          </mat-form-field>
+        </div>
+        <p>
+          <button type="submit" (click)="send()" mat-raised-button color="primary">Send</button>
+        </p>
+        <p *ngIf="isSent">
+          Your message has been sent!
+        </p>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+</div>
+

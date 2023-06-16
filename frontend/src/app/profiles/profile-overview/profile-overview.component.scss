@@ -1,0 +1,39 @@
+
+.profile-container{
+  padding: 20px;
+
+  border-width: 3px;
+  border-color: lightsalmon;
+  border-style: solid;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+
+  font-size:20px;
+  color: burlywood;
+}
+
+.profile-name{
+  width: 60%;
+}
+
+.filename{
+  cursor: pointer;
+}
+
+
+.delete{
+  margin: 5px;
+  font-size: 15px;
+  color: grey;
+  cursor: pointer;
+}
+
+.profile-info{
+  width: 20%;
+}
+
+.add_button{
+  margin-left: auto;
+}

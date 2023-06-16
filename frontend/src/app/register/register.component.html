@@ -1,0 +1,45 @@
+<div fxLayout fxLayoutAlign="center" style="margin: 50px 50px;">
+  <mat-card fxLayout="column" fxFlex="1 1 50%" fxFlex.lt-sm="1 1 auto">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form fxLayout="column" [formGroup]="registerFormInstance">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input type="text" matInput formControlName="username">
+          <mat-error
+            *ngIf="registerFormInstance.get('username')?.getError('required')">
+            Username is required</mat-error>
+          <mat-error
+            *ngIf="registerFormInstance.get('username')?.getError('email')">
+            Username must be an email</mat-error>
+        </mat-form-field>
+        <div fxLayout="column" formGroupName="passwordGroup">
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password">
+            <mat-error
+              *ngIf="registerFormInstance.get('passwordGroup')?.get('password')?.getError('minlength')">
+              Password must be more than 3 characters
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input type="password" matInput formControlName="confirmPassword">
+          </mat-form-field>
+          <mat-error
+            *ngIf="registerFormInstance.get('passwordGroup')?.getError('passwordNotMatch')">
+          {{registerFormInstance.get('passwordGroup')?.getError('passwordNotMatch')}}
+          </mat-error>
+        </div>
+        <p>
+          <button (click)="register()" type="submit" mat-raised-button color="primary">Register</button>
+        </p>
+        <p *ngIf="isRegistered">You have registered!</p>
+        <p *ngIf="regFailed">You already have an account!</p>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+</div>

@@ -1,0 +1,36 @@
+.profile-list-section{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.profile-list-section>div{
+  width: 80%;
+  margin: 5px auto;
+  justify-content: center;
+}
+
+.profile-counts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+  color: dimgrey;
+  background: lightgray;
+  padding: 30px;
+}
+
+.profile-counts>li{
+}
+
+.add-profile{
+  text-align: end;
+}
+
+.profiles-list-container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+

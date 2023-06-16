@@ -1,0 +1,53 @@
+<div class="container" >
+  <ng-template #alterTemplate>
+    <p class="title">Congrats! You are already a premium user!</p>
+  </ng-template>
+<div class="box1" *ngIf="!isPremium; else alterTemplate">
+  <p class="title">Upgrade to premium by $20/month</p>
+  <button (click)="setPay()" style="width: 90%">
+    Ok</button>
+</div>
+
+<div *ngIf="start" [formGroup]="paymentElementForm" style="display: flex; flex-direction: column; gap: 10px; width: 60%">
+  <mat-card-header style="display: flex; flex-direction: column">
+    <mat-card-title>
+      Payment of $20
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column">
+  <ng-container>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input matInput placeholder="name" formControlName="name" />
+  </mat-form-field>
+    </ng-container>
+    <ng-container>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input matInput placeholder="Email" type="email" formControlName="email" />
+  </mat-form-field>
+    </ng-container>
+  <ng-container>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input matInput placeholder="Address" formControlName="address" />
+  </mat-form-field>
+  </ng-container>
+    <ng-container>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="Zipcode" formControlName="zipcode" maxlength="5"/>
+      </mat-form-field>
+    </ng-container>
+    <ng-container>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="City" formControlName="city" />
+      </mat-form-field>
+    </ng-container>
+  <ng-container>
+</ng-container>
+  <ng-container *ngIf="elementsOptions?.clientSecret as clientSecret">
+    <ngx-stripe-payment [clientSecret]="clientSecret">
+    </ngx-stripe-payment>
+  </ng-container>
+  <button (click)="pay(); submit();">PAY</button>
+  </mat-card-content>
+</div>
+</div>

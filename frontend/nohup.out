@@ -1,0 +1,97 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-04-10 21:23:30.385  INFO 15506 --- [           main] c.m.S.SpringBootProjectApplication       : Starting SpringBootProjectApplication v0.0.1-SNAPSHOT using Java 11.0.18 on ip-172-31-85-175 with PID 15506 (/home/ubuntu/SpringBootProject-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu)
+2023-04-10 21:23:30.392  INFO 15506 --- [           main] c.m.S.SpringBootProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-10 21:23:32.749  INFO 15506 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-10 21:23:32.990  INFO 15506 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 195 ms. Found 5 JPA repository interfaces.
+2023-04-10 21:23:35.305  INFO 15506 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-10 21:23:35.326  INFO 15506 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-10 21:23:35.327  INFO 15506 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-10 21:23:35.547  INFO 15506 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-10 21:23:35.547  INFO 15506 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5006 ms
+2023-04-10 21:23:36.744  INFO 15506 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-10 21:23:36.938  INFO 15506 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-04-10 21:23:37.445  INFO 15506 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-10 21:23:37.836  INFO 15506 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-10 21:23:38.725  INFO 15506 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-10 21:23:38.783  INFO 15506 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-10 21:23:40.949  INFO 15506 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-10 21:23:40.976  INFO 15506 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-10 21:23:43.245  INFO 15506 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2152ab30, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3902bd2c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ff19c33, org.springframework.security.web.header.HeaderWriterFilter@37854b34, org.springframework.web.filter.CorsFilter@7d32e714, org.springframework.security.web.authentication.logout.LogoutFilter@4fdca00a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60a19573, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@df921b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d1ff6b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45f756e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eb6ec6, org.springframework.security.web.session.SessionManagementFilter@34332b8d, org.springframework.security.web.access.ExceptionTranslationFilter@5f14761c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66f28a1f]
+2023-04-10 21:23:43.354  WARN 15506 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-10 21:23:44.635  INFO 15506 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-10 21:23:44.660  INFO 15506 --- [           main] c.m.S.SpringBootProjectApplication       : Started SpringBootProjectApplication in 15.539 seconds (JVM running for 17.208)
+2023-04-10 21:52:54.105  INFO 15506 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-10 21:52:54.106  INFO 15506 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-10 21:52:54.109  INFO 15506 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_ where company0_.name=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-04-10 22:18:25.761  INFO 15827 --- [           main] c.m.S.SpringBootProjectApplication       : Starting SpringBootProjectApplication v0.0.1-SNAPSHOT using Java 11.0.18 on ip-172-31-85-175 with PID 15827 (/home/ubuntu/SpringBootProject-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu)
+2023-04-10 22:18:25.768  INFO 15827 --- [           main] c.m.S.SpringBootProjectApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-10 22:18:27.932  INFO 15827 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-10 22:18:28.146  INFO 15827 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 5 JPA repository interfaces.
+2023-04-10 22:18:29.964  INFO 15827 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-10 22:18:29.996  INFO 15827 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-10 22:18:29.997  INFO 15827 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-10 22:18:30.225  INFO 15827 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-10 22:18:30.225  INFO 15827 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4300 ms
+2023-04-10 22:18:31.313  INFO 15827 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-10 22:18:31.445  INFO 15827 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-04-10 22:18:31.866  INFO 15827 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-10 22:18:32.211  INFO 15827 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-10 22:18:32.920  INFO 15827 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-10 22:18:32.962  INFO 15827 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-10 22:18:35.190  INFO 15827 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-10 22:18:35.217  INFO 15827 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-10 22:18:37.376  INFO 15827 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66f28a1f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60a19573, org.springframework.security.web.context.SecurityContextPersistenceFilter@52b3bf03, org.springframework.security.web.header.HeaderWriterFilter@48eb001a, org.springframework.web.filter.CorsFilter@44a085e5, org.springframework.security.web.authentication.logout.LogoutFilter@329548d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@44d64d4e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@47ac613b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@462abec3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35c9a231, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@134ff8f8, org.springframework.security.web.session.SessionManagementFilter@724b939e, org.springframework.security.web.access.ExceptionTranslationFilter@33feb805, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@157ec23b]
+2023-04-10 22:18:37.487  WARN 15827 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-10 22:18:38.572  INFO 15827 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-10 22:18:38.599  INFO 15827 --- [           main] c.m.S.SpringBootProjectApplication       : Started SpringBootProjectApplication in 14.108 seconds (JVM running for 15.269)
+2023-04-10 22:18:47.195  INFO 15827 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-10 22:18:47.196  INFO 15827 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-10 22:18:47.197  INFO 15827 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select user0_.id as id1_6_, user0_.password as password2_6_, user0_.username as username3_6_ from users user0_ where user0_.username=?
+Hibernate: select types0_.user_id as user_id1_5_0_, types0_.user_type_id as user_typ2_5_0_, usertype1_.id as id1_4_1_, usertype1_.type as type2_4_1_ from user_usertype types0_ inner join user_type usertype1_ on types0_.user_type_id=usertype1_.id where types0_.user_id=?
+Hibernate: select company0_.name as name1_0_, company0_.descrp as descrp2_0_, company0_.logo as logo3_0_, company0_.url as url4_0_ from company company0_ where company0_.name=?

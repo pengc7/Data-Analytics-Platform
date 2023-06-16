@@ -1,0 +1,17 @@
+<div class="profile-container" *ngIf="profile">
+  <input (change)="editGroup()" type="checkbox" name="selected" [(ngModel)]="isSelected">
+  <div class="profile-name" >
+    <p class="filename"[routerLink]="['/profile-detail', profile.name]">{{profile.name}}</p>
+    <p class="delete" (click)="send()">delete</p>
+  </div>
+
+  <div class="profile-info">
+    <p>{{pcount}}</p>
+    <p style="font-size: 15px">Posts</p>
+  </div>
+  <div class="profile-info">
+    <p>{{fcount}}</p>
+    <p style="font-size: 15px">Followers</p>
+  </div>
+</div>
+

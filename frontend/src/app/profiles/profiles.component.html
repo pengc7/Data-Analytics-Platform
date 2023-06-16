@@ -1,0 +1,29 @@
+<section class="profile-list-section">
+    <ul class="profile-counts">
+      <li style="display:inline-block">
+        <p>Profile used: {{count}}/{{maxlimit}}</p>
+        <p *ngIf="limit" style="font-size: 15px">You can only see {{maxlimit}} profiles</p>
+      </li>
+      <li style="display:inline-block;" routerLink="/premium" routerLinkActive="active">
+        Compare groups
+      </li>
+    </ul>
+
+  <div class="add-profile">
+      <form class="form-inline">
+        <input [(ngModel)]="input" [formControl]="inputControl" name = "input" placeholder="Company name" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let p of filteredProfiles| slice:0:1 " [value]="p">
+          {{p}}
+          </mat-option>
+        </mat-autocomplete>
+
+        <button (click)="addProfile()" class="btn btn-outline-secondary">+Add New Profile</button>
+      </form>
+    </div>
+
+  <div class="profiles-list-container" *ngIf="profileShow">
+    <app-profile-overview [profile] = "profile" *ngFor="let profile of profileShow" (sendData)="deleteProfile($event)">
+    </app-profile-overview>
+  </div>
+</section>
